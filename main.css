@@ -1,0 +1,82 @@
+*
+{
+    box-sizing: border-box;
+}
+.BarParent
+{
+    position: relative;
+    display: inline-block;
+}
+.BarChild
+{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 20px;
+}
+.PlayerHealthParent
+{
+    position: relative; 
+    height: 30px; 
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.PlayerHealthChild
+{
+    background-color: red; 
+    height: 30px; 
+    width: 100%;
+}
+.PlayerHealth
+{
+    position: absolute; 
+    background-color:yellow; 
+    top: 0; 
+    bottom: 0; 
+    right: 0; 
+    width: 100%;
+}
+.Timer
+{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.EnemyHealthParent
+{
+    position: relative; 
+    height: 30px; 
+    width: 100%;
+}
+.EnemyHealthChild
+{
+    background-color: red; 
+    height: 30px
+}
+.EnemyHealth
+{
+    position: absolute; 
+    background-color: yellow; 
+    top: 0; 
+    bottom: 0; 
+    right: 0; 
+    left: 0;
+}
+.DisplayText
+{
+    position: absolute; 
+    color:aliceblue; 
+    align-items: center; 
+    justify-content: center; 
+    top: 0; 
+    bottom: 0; 
+    right: 0; 
+    left: 0; 
+    display: none;
+}
