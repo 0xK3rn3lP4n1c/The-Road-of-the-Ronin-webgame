@@ -15,7 +15,11 @@ const player = new Fighter(
     {
         position:{x:0, y:0},
         velocity:{x:0, y:0},
-        offset:{x:0, y:0}
+        offset:{x:0, y:0},
+        imageSrc: './img/RoninTakashi/Idle.png',
+        framesMax: 8,
+        scale: 3.5,
+        offset: {x: 300 , y:285}
     })
 const enemy = new Fighter(
     {
@@ -57,7 +61,7 @@ function Animate()
     background.update()
     fire.update()
     player.update()
-    enemy.update()
+    //enemy.update()
     player.velocity.x = 0
     enemy.velocity.x = 0
     //player Movement
