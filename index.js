@@ -19,7 +19,15 @@ const player = new Fighter(
         imageSrc: './img/RoninTakashi/Idle.png',
         framesMax: 8,
         scale: 3.5,
-        offset: {x: 300 , y:285}
+        offset: {x: 300 , y:285},
+        sprites:
+        {
+            idle: {imageSrc: './img/RoninTakashi/Idle.png', framesMax: 8},
+            run: {imageSrc: './img/RoninTakashi/Run.png', framesMax: 8,},
+            jump: {imageSrc: './img/RoninTakashi/Jump.png', framesMax: 2},
+            fall: {imageSrc: './img/RoninTakashi/Fall.png', framesMax: 2},
+            attack1: {imageSrc: './img/RoninTakashi/Attack1.png', framesMax: 6}
+        } 
     })
 const enemy = new Fighter(
     {
@@ -68,11 +76,27 @@ function Animate()
     if (keys.a.pressed && player.lastKey === 'a') 
     {
         player.velocity.x = -7
+        player.switchSprite('run')
     }
     else if(keys.d.pressed && player.lastKey === 'd')
     {
         player.velocity.x = 7
+        player.switchSprite('run')
+    }else
+    {
+        player.switchSprite('idle')
     }
+
+    //Jump
+    if (player.velocity.y < 0) 
+    {
+        player.switchSprite('jump')   
+    }
+    else if(player.velocity.y > 0)
+    {
+        player.switchSprite('fall')
+    }
+
     //enemy Movemet
     if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft') 
     {
