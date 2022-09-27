@@ -96,6 +96,8 @@ function Animate()
     c.fillRect(0, 0, canvas.width, canvas.height)
     background.update()
     fire.update()
+    c.fillStyle = 'rgba(255, 255, 255, 0.078)'
+    c.fillRect(0, 0, canvas.width, canvas.height)
     player.update()
     enemy.update()
     player.velocity.x = 0
@@ -155,7 +157,10 @@ function Animate()
     {
         enemy.takeHit()
         player.isAttacking = false
-        document.querySelector('#enemyHealth').style.width = enemy.health + '%'
+        gsap.to('#enemyHealth',
+        {
+            width: enemy.health + '%'
+        })
     }
 
     //If Player Miss
@@ -168,7 +173,10 @@ function Animate()
     {
         player.takeHit()
         enemy.isAttacking = false
-        document.querySelector('#playerHealth').style.width = player.health + '%'
+        gsap.to('#playerHealth',
+        {
+            width: player.health + '%'
+        })
     }
 
     //If Enemy Miss
