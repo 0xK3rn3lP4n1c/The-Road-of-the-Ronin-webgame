@@ -21,7 +21,7 @@ Embark on a journey through the life of Takashi, the Ronin, in this shortened de
 
 ```
 
-git clone https://github.com/YOUR-USERNAME/road-of-the-ronin.git
+git clone https://github.com/Kazuto-Kawahara/road-of-the-ronin.git
 
 ```
 
